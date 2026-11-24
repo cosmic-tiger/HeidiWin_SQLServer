@@ -274,6 +274,9 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <None Include="..\..\source\const.inc"/>
+        <None Include="README.txt"/>
+        <None Include="README2.md"/>
+        <None Include="README3.txt"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -357,9 +360,33 @@
             <Deployment Version="5">
                 <DeployFile LocalName="$(crossvcl)\Redist\libcrossvcl.so"/>
                 <DeployFile LocalName="..\..\out\heidisql.exe" Configuration="Debug" Class="ProjectOutput"/>
+                <DeployFile LocalName="..\..\out\heidisql.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win64">
+                        <RemoteName>heidisql.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="..\..\out\heidisql.exe" Configuration="Release" Class="ProjectOutput"/>
                 <DeployFile LocalName="..\..\source\const.inc" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="..\..\source\const.inc" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win64">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="..\..\source\const.inc" Configuration="Release" Class="ProjectFile"/>
+                <DeployFile LocalName="New1.txt" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win64">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="README2.md" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win64">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployClass Name="AdditionalDebugSymbols">
                     <Platform Name="iOSSimulator">
                         <Operation>1</Operation>
